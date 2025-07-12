@@ -28,7 +28,13 @@ public class Stock {
 
     // trend- patterns for stock up or down 
     public String getTrend(){
-        return currentPrice > previousPrice ? "Upward" : (currentPrice < previousPrice ? "Downward" : "Stable");
+        if (currentPrice > previousPrice) {
+            return "Upward";
+        } else if (currentPrice < previousPrice) {
+            return "Downward";
+        } else {
+            return "Stable";
+        }
     }
 
      
